@@ -80,15 +80,13 @@ trait ApplicationTrait
         $applicationClass = static::$applicationClass ?? Application::class;
 
         // Allow override by options
-        if (array_key_exists('applicationClass', $options)) {
+        if (\array_key_exists('applicationClass', $options)) {
             $applicationClass = $options['applicationClass'];
         }
 
         // Validate application class
         if (!class_implements($applicationClass, Application::class)) {
-            throw new InvalidArgumentException(
-                sprintf('Given application class musst implement %s', Application::class)
-            );
+            throw new InvalidArgumentException(sprintf('Given application class musst implement %s', Application::class));
         }
 
         // Set application class if not set
@@ -97,7 +95,7 @@ trait ApplicationTrait
         }
 
         // Get or boot kernel if required
-        $kernel = array_key_exists('kernel', $options) ? $options['kernel'] : static::bootKernel($options);
+        $kernel = \array_key_exists('kernel', $options) ? $options['kernel'] : static::bootKernel($options);
 
         $application = new $applicationClass($kernel);
 
