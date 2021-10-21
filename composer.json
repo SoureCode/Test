@@ -15,6 +15,8 @@
     ],
     "require": {
         "php": ">=8.0",
+        "doctrine/doctrine-bundle": "^2.4",
+        "doctrine/orm": "^2.10",
         "symfony/framework-bundle": "^5.3 || ^6.0",
         "symfony/console": "^5.3 || ^6.0",
         "symfony/routing": "^5.3 || ^6.0",
