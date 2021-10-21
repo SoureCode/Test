@@ -2,10 +2,7 @@
     "name": "sourecode/test",
     "type": "library",
     "description": "Provides several traits to enhance tests with symfony.",
-    "keywords": [
-        "symfony",
-        "test"
-    ],
+    "keywords": ["symfony", "test"],
     "license": "MIT",
     "authors": [
         {
@@ -29,6 +26,11 @@
         "exclude-from-classmap": [
             "/Tests/"
         ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
     },
     "minimum-stability": "dev"
 }
