@@ -29,10 +29,10 @@ trait ApplicationTrait
 
     protected static ?Application $application = null;
 
-    protected function executeCommand(array $input): string
+    protected static function executeCommand(array $input): string
     {
         if (!static::$application) {
-            self::bootApplication();
+            static::bootApplication();
         }
 
         $outputBuffer = new BufferedOutput();
