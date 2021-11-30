@@ -1,0 +1,36 @@
+{
+    "name": "sourecode/test",
+    "type": "library",
+    "description": "Provides several traits to enhance tests with symfony.",
+    "keywords": ["symfony", "test"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jason Schilling",
+            "email": "jason@sourecode.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.0 || ^8.1",
+        "doctrine/doctrine-bundle": "^2.4",
+        "doctrine/orm": "^2.10",
+        "symfony/framework-bundle": "^5.3 || ^5.4 || ^6.0 || ^6.1",
+        "symfony/console": "^5.3 || ^5.4 || ^6.0 || ^6.1",
+        "symfony/routing": "^5.3 || ^5.4 || ^6.0 || ^6.1",
+        "symfony/contracts": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "SoureCode\\Component\\Test\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
